@@ -93,7 +93,7 @@ in
         User = dbUser;
         DynamicUser = true;
         RuntimeDirectory = "miniflux";
-        RuntimeDirectoryMode = "0700";
+        RuntimeDirectoryMode = "0755";
         EnvironmentFile = cfg.adminCredentialsFile;
         # Hardening
         CapabilityBoundingSet = [ "" ];
