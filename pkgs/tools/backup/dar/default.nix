@@ -3,7 +3,7 @@
 , attr, e2fsprogs
 , curl, libargon2, librsync, libthreadar
 , gpgme, libgcrypt, openssl
-, bzip2, lz4, lzo, xz, zlib
+, bzip2, lz4, lzo, xz, zlib, zstd
 }:
 
 with lib;
@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     curl librsync libthreadar
     gpgme libargon2 libgcrypt openssl
-    bzip2 lz4 lzo xz zlib
+    bzip2 lz4 lzo xz zlib zstd
   ] ++ optionals stdenv.isLinux [ attr e2fsprogs ];
 
   configureFlags = [
